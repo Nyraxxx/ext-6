@@ -258,8 +258,7 @@ int main(void)
 
                 uart_putc('0');
                  cur_char = START;
-                
-
+        
             }
 
             break;
@@ -303,8 +302,7 @@ int main(void)
                 uart_putc('0');
                 cur_char = START;
 
-                
-
+         
             }
 
             break;
@@ -410,8 +408,7 @@ int main(void)
 
             }
 
-            
-
+     
             else
 
             {
