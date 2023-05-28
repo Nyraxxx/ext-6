@@ -140,8 +140,9 @@ int main(void)
             }
             break;
         case FOO:
-            input = uart_getc();
+            
             uart_putc('0');
+                input = uart_getc();
             if (input == 'b')
             {
 
