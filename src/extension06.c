@@ -140,11 +140,17 @@ int main(void)
             }
             break;
         case FOO:
-            
+            input = uart_getc();
+            if (input == 'b')
+            {
+                cur_char = FOOB
+            }
+            else
+            {
 
                 uart_putc('0');
                 cur_char = START;
-            
+            }
             break;
         case BAR:
             uart_putc('1');
