@@ -196,7 +196,7 @@ int main(void)
             break;
         case FOO:
 
-            //input = uart_getc();
+            input = uart_getc();
             if (input == 'b')
             {
 
