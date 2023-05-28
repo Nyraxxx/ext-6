@@ -131,7 +131,7 @@ int main(void)
             else
             {
                 uart_putc('0');
-                cur_char = START;
+                
             }
             break;
         case FOOBA:
@@ -153,7 +153,7 @@ int main(void)
             else
             {
                 uart_putc('0');
-                cur_char = START;
+                
             }
             break;
 
@@ -203,7 +203,7 @@ int main(void)
 
                 cur_char = FOOB;
             }
-            if (input == 'f')
+            else if (input == 'f')
             {
                 uart_putc('0');
                 cur_char = F;
