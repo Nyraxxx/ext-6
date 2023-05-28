@@ -125,7 +125,7 @@ int main(void)
             cur_char = START;
             break;
         case FOOBAR:
-            uart_puts('\n');
+            uart_putc('\n');
             cur_char = START;
             break;
 
