@@ -186,7 +186,7 @@ int main(void)
             {
                 cur_char = F;
             }
-            else if (input == 'B')
+            else if (input == 'b')
             {
                 cur_char = B;
             }
@@ -203,7 +203,7 @@ int main(void)
 
                 cur_char = FOOB;
             }
-            if (input == 'F')
+            if (input == 'f')
             {
                 uart_putc('0');
                 cur_char = F;
