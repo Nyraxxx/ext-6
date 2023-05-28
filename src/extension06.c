@@ -58,6 +58,7 @@ int main(void)
     uart_init();
     while (1)
     {
+        input = uart_getc();
         switch (cur_char)
         {
         case START:
@@ -119,14 +120,17 @@ int main(void)
             }
             else if (input == 'b')
             {
+                uart_putc('0');
                 cur_char = B;
             }
             else if (input == 'f')
             {
+                uart_putc('0');
                 cur_char = F;
             }
             else
             {
+                uart_putc('0');
                 cur_char = START;
             }
             break;
@@ -138,14 +142,17 @@ int main(void)
             }
             else if (input == 'b')
             {
+                uart_putc('0');
                 cur_char = B;
             }
             else if (input == 'f')
             {
+                uart_putc('0');
                 cur_char = F;
             }
             else
             {
+                uart_putc('0');
                 cur_char = START;
             }
             break;
