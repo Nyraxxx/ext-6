@@ -141,8 +141,8 @@ int main(void)
             break;
         case FOO:
             
-            uart_putc('0');
-                input = uart_getc();
+            
+            input = uart_getc();
             if (input == 'b')
             {
 
@@ -150,7 +150,7 @@ int main(void)
             }
             else
             {
-
+                uart_putc('0');
                 cur_char = START;
             }
 
