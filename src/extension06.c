@@ -66,6 +66,7 @@ int main(void)
             {
                 cur_char = B;
             }
+
             break;
 
         case F:
@@ -75,10 +76,7 @@ int main(void)
                 input = uart_getc();
                 if (input == 'o')
                     cur_char = FOO;
-                else
-                {
-                    cur_char = B;
-                }
+                
             }
             else if (input == 'b')
             {
@@ -91,10 +89,7 @@ int main(void)
                 input = uart_getc();
                 if (input == 'r')
                     cur_char = BAR;
-                else
-                {
-                    cur_char = F;
-                }
+                
             }
             else if (input == 'f')
             {
@@ -102,22 +97,25 @@ int main(void)
             }
             break;
         case FOO:
-        //oh god if statement hell
+            // oh god if statement hell
             input = uart_getc();
-            if (input == 'b'){
+            if (input == 'b')
+            {
                 input = uart_getc();
-                if (input == 'a'){
+                if (input == 'a')
+                {
                     input = uart_getc();
-                    if (input == 'r'){
+                    if (input == 'r')
+                    {
                         cur_char = FOOBAR;
                     }
                 }
-            
+            }
+            else
+            {
 
-            }else{
-
-            uart_putc(0);
-            cur_char = START;
+                uart_putc(0);
+                cur_char = START;
             }
             break;
         case BAR:
