@@ -62,7 +62,7 @@ int main(void)
         switch (cur_char)
         {
         case START:
-           // input = uart_getc();
+            // input = uart_getc();
             if (input == 'f')
             {
                 cur_char = F;
@@ -75,7 +75,7 @@ int main(void)
             break;
 
         case F:
-            //input = uart_getc();
+            // input = uart_getc();
             if (input == 'o')
             {
                 cur_char = FO;
@@ -94,7 +94,7 @@ int main(void)
             }
             break;
         case FO:
-           // input = uart_getc();
+            // input = uart_getc();
             if (input == 'o')
             {
                 cur_char = FOO;
@@ -113,7 +113,7 @@ int main(void)
             }
             break;
         case FOOB:
-            //input = uart_getc();
+            // input = uart_getc();
             if (input == 'a')
             {
                 cur_char = FOOBA;
@@ -135,7 +135,7 @@ int main(void)
             }
             break;
         case FOOBA:
-            //input = uart_getc();
+            // input = uart_getc();
             if (input == 'r')
             {
                 cur_char = FOOBAR;
@@ -158,7 +158,7 @@ int main(void)
             break;
 
         case B:
-        //input = uart_getc();
+            // input = uart_getc();
             if (input == 'a')
             {
                 cur_char = BA;
@@ -166,7 +166,8 @@ int main(void)
             else if (input == 'f')
             {
                 cur_char = F;
-            }else if (input == 'b')
+            }
+            else if (input == 'b')
             {
                 cur_char = B;
             }
@@ -176,7 +177,7 @@ int main(void)
             }
             break;
         case BA:
-           // input = uart_getc();
+            // input = uart_getc();
             if (input == 'r')
             {
                 cur_char = BAR;
@@ -196,11 +197,21 @@ int main(void)
             break;
         case FOO:
 
-            input = uart_getc();
+            // input = uart_getc();
             if (input == 'b')
             {
 
                 cur_char = FOOB;
+            }
+            if (input == 'F')
+            {
+                uart_putc('0');
+                cur_char = F;
+            }
+            if (input == 'b')
+            {
+                uart_putc('0');
+                cur_char = B;
             }
             else
             {
