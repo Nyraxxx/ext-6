@@ -1,6 +1,5 @@
 #include "uart.h"
 
-
 /***
 
  * Ex E6.0
@@ -73,7 +72,6 @@
 
 typedef enum
 
-
 {
 
     START,
@@ -96,9 +94,7 @@ typedef enum
 
     BAR
 
-
 } ch_state;
-
 
 ch_state cur_char = START;
 
@@ -129,7 +125,6 @@ int main(void)
             {
 
                 cur_char = F;
-
             }
 
             else if (input == 'b')
@@ -137,12 +132,9 @@ int main(void)
             {
 
                 cur_char = B;
-
             }
 
-
             break;
-
 
         case F:
 
@@ -153,7 +145,6 @@ int main(void)
             {
 
                 cur_char = FO;
-
             }
 
             else if (input == 'b')
@@ -161,7 +152,6 @@ int main(void)
             {
 
                 cur_char = B;
-
             }
 
             else if (input == 'f')
@@ -169,7 +159,6 @@ int main(void)
             {
 
                 cur_char = F;
-
             }
 
             else
@@ -177,7 +166,6 @@ int main(void)
             {
 
                 cur_char = START;
-
             }
 
             break;
@@ -191,7 +179,6 @@ int main(void)
             {
 
                 cur_char = FOO;
-
             }
 
             else if (input == 'b')
@@ -199,7 +186,6 @@ int main(void)
             {
 
                 cur_char = B;
-
             }
 
             else if (input == 'f')
@@ -207,7 +193,6 @@ int main(void)
             {
 
                 cur_char = F;
-
             }
 
             else
@@ -215,7 +200,6 @@ int main(void)
             {
 
                 cur_char = START;
-
             }
 
             break;
@@ -229,7 +213,6 @@ int main(void)
             {
 
                 cur_char = FOOBA;
-
             }
 
             else if (input == 'b')
@@ -239,7 +222,6 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = B;
-
             }
 
             else if (input == 'f')
@@ -249,7 +231,6 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = F;
-
             }
 
             else
@@ -257,8 +238,7 @@ int main(void)
             {
 
                 uart_putc('0');
-                 cur_char = START;
-        
+                cur_char = START;
             }
 
             break;
@@ -272,7 +252,6 @@ int main(void)
             {
 
                 cur_char = FOOBAR;
-
             }
 
             else if (input == 'b')
@@ -282,7 +261,6 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = B;
-
             }
 
             else if (input == 'f')
@@ -292,7 +270,6 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = F;
-
             }
 
             else
@@ -301,12 +278,9 @@ int main(void)
 
                 uart_putc('0');
                 cur_char = START;
-
-         
             }
 
             break;
-
 
         case B:
 
@@ -317,7 +291,6 @@ int main(void)
             {
 
                 cur_char = BA;
-
             }
 
             else if (input == 'f')
@@ -325,7 +298,6 @@ int main(void)
             {
 
                 cur_char = F;
-
             }
 
             else if (input == 'b')
@@ -333,7 +305,6 @@ int main(void)
             {
 
                 cur_char = B;
-
             }
 
             else
@@ -341,7 +312,6 @@ int main(void)
             {
 
                 cur_char = START;
-
             }
 
             break;
@@ -355,7 +325,6 @@ int main(void)
             {
 
                 cur_char = BAR;
-
             }
 
             else if (input == 'f')
@@ -363,7 +332,6 @@ int main(void)
             {
 
                 cur_char = F;
-
             }
 
             else if (input == 'b')
@@ -371,7 +339,6 @@ int main(void)
             {
 
                 cur_char = B;
-
             }
 
             else
@@ -379,13 +346,11 @@ int main(void)
             {
 
                 cur_char = START;
-
             }
 
             break;
 
         case FOO:
-
 
             // input = uart_getc();
 
@@ -393,9 +358,7 @@ int main(void)
 
             {
 
-
                 cur_char = FOOB;
-
             }
 
             else if (input == 'f')
@@ -405,10 +368,8 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = F;
-
             }
 
-     
             else
 
             {
@@ -416,9 +377,7 @@ int main(void)
                 uart_putc('0');
 
                 cur_char = START;
-
             }
-
 
             break;
 
@@ -426,7 +385,26 @@ int main(void)
 
             uart_putc('1');
 
-            cur_char = START;
+            if (input == 'b')
+
+            {
+
+                cur_char = B;
+            }
+
+            else if (input == 'f')
+
+            {
+
+                cur_char = F;
+            }
+
+            else
+
+            {
+
+                cur_char = START;
+            }
 
             break;
 
@@ -434,21 +412,36 @@ int main(void)
 
             uart_putc('\n');
 
-            cur_char = START;
+            if (input == 'b')
+
+            {
+
+                cur_char = B;
+            }
+
+            else if (input == 'f')
+
+            {
+
+                cur_char = F;
+            }
+
+            else
+
+            {
+
+                cur_char = START;
+            }
 
             break;
-
 
         default:
 
             cur_char = START;
 
             break;
-
         }
 
-
     } // end while
-
 
 } // end main()
