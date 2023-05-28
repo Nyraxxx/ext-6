@@ -88,10 +88,7 @@ int main(void)
             {
                 cur_char = F;
             }
-            else
-            {
-                cur_char = START;
-            }
+           
             break;
         case FO:
             // input = uart_getc();
@@ -107,10 +104,7 @@ int main(void)
             {
                 cur_char = F;
             }
-            else
-            {
-                cur_char = START;
-            }
+            
             break;
         case FOOB:
             // input = uart_getc();
@@ -171,10 +165,7 @@ int main(void)
             {
                 cur_char = B;
             }
-            else
-            {
-                cur_char = START;
-            }
+            
             break;
         case BA:
             // input = uart_getc();
