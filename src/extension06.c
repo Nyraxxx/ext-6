@@ -40,10 +40,14 @@ typedef enum
 {
     START,
     F,
-    B,
+    FO,
     FOO,
-    BAR,
-    FOOBAR
+    FOOB,
+    FOOBA,
+    FOOBAR,
+    B,
+    BA,
+    BAR
 
 } ch_state;
 
@@ -73,23 +77,62 @@ int main(void)
             input = uart_getc();
             if (input == 'o')
             {
-                input = uart_getc();
-                if (input == 'o')
-                    cur_char = FOO;
-                
+                cur_char = FO;
             }
             else if (input == 'b')
             {
                 cur_char = B;
             }
             break;
+        case FO:
+            input = uart_getc();
+            if (input == 'o')
+            {
+                cur_char = FOO;
+            }
+            else if (input == 'b')
+            {
+                cur_char = B;
+            }
+            break;
+        case FOOB:
+            input = uart_getc();
+            if (input == 'a')
+            {
+                cur_char = FOOBA;
+            }
+            else if (input == 'b')
+            {
+                cur_char = B;
+            }
+            break;
+        case FOOBA:
+            input = uart_getc();
+            if (input == 'r')
+            {
+                cur_char = FOOBAR;
+            }
+            else if (input == 'b')
+            {
+                cur_char = B;
+            }
+            break;
+
         case B:
             if (input == 'a')
             {
-                input = uart_getc();
-                if (input == 'r')
-                    cur_char = BAR;
-                
+                cur_char = BA;
+            }
+            else if (input == 'f')
+            {
+                cur_char = F;
+            }
+            break;
+        case BA:
+            input = uart_getc();
+            if (input == 'r')
+            {
+                cur_char = BAR;
             }
             else if (input == 'f')
             {
@@ -97,26 +140,11 @@ int main(void)
             }
             break;
         case FOO:
-            // oh god if statement hell
-            input = uart_getc();
-            if (input == 'b')
-            {
-                input = uart_getc();
-                if (input == 'a')
-                {
-                    input = uart_getc();
-                    if (input == 'r')
-                    {
-                        cur_char = FOOBAR;
-                    }
-                }
-            }
-            else
-            {
+            
 
                 uart_putc('0');
                 cur_char = START;
-            }
+            
             break;
         case BAR:
             uart_putc('1');
