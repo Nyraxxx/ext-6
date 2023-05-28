@@ -62,7 +62,7 @@ int main(void)
         switch (cur_char)
         {
         case START:
-            input = uart_getc();
+           // input = uart_getc();
             if (input == 'f')
             {
                 cur_char = F;
@@ -75,7 +75,7 @@ int main(void)
             break;
 
         case F:
-            input = uart_getc();
+            //input = uart_getc();
             if (input == 'o')
             {
                 cur_char = FO;
@@ -158,6 +158,7 @@ int main(void)
             break;
 
         case B:
+        //input = uart_getc();
             if (input == 'a')
             {
                 cur_char = BA;
