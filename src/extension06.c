@@ -116,16 +116,16 @@ int main(void)
 
             }else{
 
-            uart_putc("0");
+            uart_putc(0);
             cur_char = START;
             }
             break;
         case BAR:
-            uart_putc("1");
+            uart_putc(1);
             cur_char = START;
             break;
         case FOOBAR:
-            uart_putc("\n");
+            uart_puts('\n');
             cur_char = START;
             break;
 
