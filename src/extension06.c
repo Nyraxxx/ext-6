@@ -94,7 +94,7 @@ int main(void)
             }
             break;
         case FO:
-            input = uart_getc();
+           // input = uart_getc();
             if (input == 'o')
             {
                 cur_char = FOO;
@@ -113,7 +113,7 @@ int main(void)
             }
             break;
         case FOOB:
-            input = uart_getc();
+            //input = uart_getc();
             if (input == 'a')
             {
                 cur_char = FOOBA;
@@ -135,7 +135,7 @@ int main(void)
             }
             break;
         case FOOBA:
-            input = uart_getc();
+            //input = uart_getc();
             if (input == 'r')
             {
                 cur_char = FOOBAR;
@@ -175,7 +175,7 @@ int main(void)
             }
             break;
         case BA:
-            input = uart_getc();
+           // input = uart_getc();
             if (input == 'r')
             {
                 cur_char = BAR;
@@ -195,7 +195,7 @@ int main(void)
             break;
         case FOO:
 
-            input = uart_getc();
+            //input = uart_getc();
             if (input == 'b')
             {
 
