@@ -82,7 +82,13 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
-            } else{
+            }
+            else if (input == 'f')
+            {
+                cur_char = F;
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
@@ -95,9 +101,13 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
-            } else if ( input == 'f'){
+            }
+            else if (input == 'f')
+            {
                 cur_char = F;
-            }else{
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
@@ -111,9 +121,12 @@ int main(void)
             {
                 cur_char = B;
             }
-            else if ( input == 'f'){
+            else if (input == 'f')
+            {
                 cur_char = F;
-            }else{
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
@@ -126,9 +139,13 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
-            } else if ( input == 'f'){
+            }
+            else if (input == 'f')
+            {
                 cur_char = F;
-            }else{
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
@@ -141,7 +158,12 @@ int main(void)
             else if (input == 'f')
             {
                 cur_char = F;
-            }else{
+            }else if (input == 'b')
+            {
+                cur_char = B;
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
@@ -154,13 +176,18 @@ int main(void)
             else if (input == 'f')
             {
                 cur_char = F;
-            }else{
+            }
+            else if (input == 'B')
+            {
+                cur_char = B;
+            }
+            else
+            {
                 cur_char = START;
             }
             break;
         case FOO:
-            
-            
+
             input = uart_getc();
             if (input == 'b')
             {
