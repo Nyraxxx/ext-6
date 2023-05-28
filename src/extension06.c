@@ -143,7 +143,7 @@ int main(void)
             input = uart_getc();
             if (input == 'b')
             {
-                cur_char = FOOB
+                cur_char = FOOB;
             }
             else
             {
