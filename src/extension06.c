@@ -208,11 +208,7 @@ int main(void)
                 uart_putc('0');
                 cur_char = F;
             }
-            if (input == 'b')
-            {
-                uart_putc('0');
-                cur_char = B;
-            }
+            
             else
             {
                 uart_putc('0');
