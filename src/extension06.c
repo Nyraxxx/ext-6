@@ -82,6 +82,8 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
+            } else{
+                cur_char = START;
             }
             break;
         case FO:
@@ -93,6 +95,10 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
+            } else if ( input == 'f'){
+                cur_char = F;
+            }else{
+                cur_char = START;
             }
             break;
         case FOOB:
@@ -105,6 +111,11 @@ int main(void)
             {
                 cur_char = B;
             }
+            else if ( input == 'f'){
+                cur_char = F;
+            }else{
+                cur_char = START;
+            }
             break;
         case FOOBA:
             input = uart_getc();
@@ -115,6 +126,10 @@ int main(void)
             else if (input == 'b')
             {
                 cur_char = B;
+            } else if ( input == 'f'){
+                cur_char = F;
+            }else{
+                cur_char = START;
             }
             break;
 
@@ -126,6 +141,8 @@ int main(void)
             else if (input == 'f')
             {
                 cur_char = F;
+            }else{
+                cur_char = START;
             }
             break;
         case BA:
@@ -137,6 +154,8 @@ int main(void)
             else if (input == 'f')
             {
                 cur_char = F;
+            }else{
+                cur_char = START;
             }
             break;
         case FOO:
