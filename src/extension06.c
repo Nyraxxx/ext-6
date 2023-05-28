@@ -145,12 +145,10 @@ int main(void)
             {
                 cur_char = FOOB;
             }
-            else
-            {
 
-                uart_putc('0');
-                cur_char = START;
-            }
+            uart_putc('0');
+            cur_char = START;
+
             break;
         case BAR:
             uart_putc('1');
